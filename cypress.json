@@ -1,0 +1,8 @@
+{
+  "pageLoadTimeout": 8000,
+  "reporter": "mochawesome",
+  "env": {
+    "URL": "https://www.rahulshettyacademy.com/angularpractice/"
+  },
+  "projectId": "nhbav5"
+}

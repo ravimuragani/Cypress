@@ -1,0 +1,10 @@
+{
+  "name": "yourname",
+  "email": "email@email.com",
+  "password": "password",
+  "gender" : "Male",
+  "bday"  : "1989-02-07",
+  "productName" : ["iphone","Samsung","Blackberry"],
+  "country" : "india",
+  "msg" : "Thank you"
+}

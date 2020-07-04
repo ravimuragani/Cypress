@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-03T20:45:25.167Z",
+    "end": "2020-07-03T20:45:40.086Z",
+    "duration": 14919,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa3881f0-cf90-4a17-b91d-7e40a8bcd179",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5555e8a9-a03a-4227-9869-3def10081cd2",
+          "title": "Framwork",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Practice shop",
+              "fullTitle": "Framwork Practice shop",
+              "timedOut": null,
+              "duration": 11961,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "formpageObj.getShopLink().click();\ncy.url().should('include', 'shop');\nthis.data.productName.forEach(function (element) {\n  cy.addProduct(element);\n}); //override global timedout configuration\nCypress.config('defaultCommandTimeout', 10000);\nshopPageObj.getCheckoutLink().click();\nvar sum = 0;\nchktPageObj.getPriceText().each(function ($el, index, $list) {\n  var res = Number($el.text().split(\" \")[1].trim());\n  sum = Number(sum) + res;\n});\nchktPageObj.getTotalTxt().then(function (element) {\n  var total = Number(element.text().split(\" \")[1].trim());\n  expect(sum).to.be.equal(total);\n});\nchktPageObj.getCheckoutBtn().click();\ncnfrmPageObj.getDeliveryBox().type(this.data.country);\ncy.wait(2000);\ncnfrmPageObj.getCntryDrpdwn().click();\ncnfrmPageObj.getChkBox().check({\n  force: true\n});\ncnfrmPageObj.getSbmtBtn().click();\ncnfrmPageObj.getScsTxt().then(function (element) {\n  var text = element.text();\n  expect(text.includes(this.data.msg)).to.be.true;\n});",
+              "err": {},
+              "uuid": "e88ff38e-46d6-4c91-8fb8-5716ff476ceb",
+              "parentUUID": "5555e8a9-a03a-4227-9869-3def10081cd2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e88ff38e-46d6-4c91-8fb8-5716ff476ceb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11961,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {},
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "cypress.automation",
+  "version": "1.0.0",
+  "description": "Automation with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "CypressOpen": "npx cypress open",
+    "CypressRun": "npx cypress run",
+    "FrameworkTest": "npm run CypressRun -- --spec \"cypress/integration/automation/Framework/*\" ",
+    "FrameworkHeadedTest": "npm run FrameworkTest -- --headed",
+    "FrameworkReporterTest": "npm run FrameworkTest -- --reporter mochawesome ",
+    "FrameworkRecordReportTest": "npm run FrameworkReporterTest -- --record --key a2eb4840-76ab-4d19-8290-af6fb09ce883 "
+  },
+  "author": "RaviMuragani",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.4.1",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^8.0.1",
+    "mochawesome": "^6.1.1"
+  },
+  "dependencies": {}
+}
